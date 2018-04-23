@@ -17,8 +17,57 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="stylesheet/mystyle.css"/>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <?php require'register_process.php';?>
+        <div class="container">
+            <div class="reg-form">
+                <form  role="form" action="index.php" method="post" class="form-horizontal ">
+                <h2 class="form-signin-heading">Register An Account</h2>
+            <br/>
+            <?php include 'Error.php';?>
+            <br/>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <div class="form-group-lg">
+                            <input name="surname" placeholder="Surname" class="form-control" type="text" autofocus required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <div class="form-group-lg">
+                            <input name="lastname" placeholder="Lastname" class="form-control" type="text" required/>
+                        </div>
+                    </div>
+                </div> 
+                <br/>
+                
+                    <div class="form-group-lg">
+                        <input name="email" placeholder="Email Address" class="form-control" type="email" autocomplete required/>
+                    </div>
+               
+                <br/>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <div class="form-group-lg">
+                            <input name="password_1" placeholder="Password" class="form-control" type="password" required/>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <div class="form-group-lg">
+                            <input name="password_2" placeholder="Confirm Password" class="form-control input-group-sm" type="password" required/>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                
+                    <div class="form-group-lg">
+                        <button type="submit" class="btn btn-lg btn-block btn-primary" name="Register">Submit</button>
+                    </div>
+                
+                <br/>
+                <p>Already Have An Account 
+                    <a class="btn btn-default">Login</a>
+                </p>    
+            </form>
+            </div>
+        </div>
     </body>
 </html>

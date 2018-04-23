@@ -6,6 +6,13 @@
    border-radius: 5px;
    box-shadow: 5px 5px 10px 10px grey;
 }
+.reg-form{
+   margin:auto;
+   padding:25px;
+   width:auto;
+    border-radius: 5px;
+   box-shadow: 5px 5px 10px 10px grey;
+}
 .container{
   margin-top:40px;
 }
