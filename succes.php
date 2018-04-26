@@ -17,7 +17,7 @@ session_start();
         <link rel="stylesheet" type="text/css" href="stylesheet/mystyle.css"/>
     </head>
     <body>
-        <div class="form" id="for">
+        <div class="success-msg">
             <div class="container">
                  <?php if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ):
                      echo $_SESSION['message'];    

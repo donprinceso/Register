@@ -25,7 +25,7 @@ if(isset($_POST['Register'])){
     
     $mail_query="select * from user where email='$email'";
     $res= mysqli_query($con, $mail_query);
-    if(mysqli_num_rows($res)>0){
+    if(mysqli_num_rows($res)==1){
         array_push($errors,"Email address already exists !");
     }
     
@@ -34,9 +34,10 @@ if(isset($_POST['Register'])){
         $sql="iNSERT INTO user (surname,lastname,email,password_1)VALUES('$surname','$lastname','$email','$password_1')";
         $result= mysqli_query($con, $sql);
         if ($result){
-            $_SESSION['message']="Hey.'$surname'.'$lastname' "
-                    . "a Confirmation have been send to .'$email' click on the button to "
-                    . "confirm your account";
+            $_SESSION['message']="<h3> Hey.<strong> $surname $lastname</strong></h3> 
+                    <h4> Your account was successfully created! </h4>
+                    a Confirmation have been send to <strong>$email</strong> click on the button in the message send to confirm your account
+                . ";
             header("Location:succes.php");
             
             

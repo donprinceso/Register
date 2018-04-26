@@ -22,7 +22,7 @@ and open the template in the editor.
         <div class="container">
             <div class="reg-form">
                 <form  role="form" action="index.php" method="post" class="form-horizontal ">
-                <h2 class="form-signin-heading">Register An Account</h2>
+                    <h2 class="form-signin-heading">Register An Account</h2>
             <br/>
             <?php include 'Error.php';?>
             <br/>
